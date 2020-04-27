@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Add link to slicknav's css here. You can find slicknav.css in the "dist" folder your slicknav download and save it as part of your project, or use the following CDN link. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
+    <!-- Add link to your custom stylesheet here. This link must come *after* the link to the slicknav stylesheet above. -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- A Google font (optional) -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+    <!--Meta-data for cellphone view-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Icons-->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <!-- You must now add general jQuery functionality with this link to the jQuery CDN. You don't need to add another document to your project for this one, since it's an absolute link leadinng to a library hosted elsewhere online. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Add link to the slicknav-specific script file here. You can find jquery.slicknav.min.css in the "dist" folder your slicknav download, or use the following CDN link. NOTE: this link must *always* come *after* the jQuery CDN link above. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+    <!--  Now add the following script to create a slicknav (mobile) version of your navigation menu, then attach it to an empty nav element you'll add before your navigation menu in your HTML. In this case, I've given my navigation menu the .nav_menu class; insert the class attached to your own navigation menu where you see .nav_menu in the following script. In the HTML, you'll see I've added an empty nav element just before .nav_menu and given it the ID #mobilemenu. That ID appears in the script below, too. Insert the class or ID name you've attached to your empty nav element where you see #mobilemenu in the following script. -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#nav_menu").slicknav({
+                prependTo: "#mobilemenu"
+            });
+        });
+    </script>
+    <title>Mauricio Rusconi's - About Page</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- This is the empty nav element that will serve as a placeholder for the slicknav version of .nav_menu. -->
+        <nav id="mobilemenu"></nav>
+
+        <!-- default nav menu -->
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="#">Courses</a>
+                    <ul>
+                        <li><a href="https://comp590-s20.cs.unc.edu/" target="_blank">COMP 590</a></li>
+                        <li><a href="http://webdemos.web.unc.edu/" target="_blank">COMP 126</a></li>
+                        <li><a href="https://ils.unc.edu/courses/2018_spring/inls523_001/inls523-001.pdf"
+                                target="_blank">INLS 523</a></li>
+                        <li><a href="https://aakshintala.com/comp590/" target="_blank">COMP 590</a></li>
+                    </ul>
+                </li>
+                <li><a href="interests.html">Interests</a></li>
+            </ul>
+        </nav>
+        <br>
+        <h1 class="title">About</h1>
+    </header>
+
+    <main>
+
+        <aside>
+            <img alt="[just me]" src="images/me_cropped.jpg" />
+        </aside>
+
+        <section1 class="column">
+            <p class="text">
+                <strong><u><br>Who am I?</u></strong><br><br>
+                I am a senior student at The University of
+                North Carolina, due to graduate in December 2020.
+                I am originally from Mendoza, Argentina where I was born and raised.
+                I have always been interested in technology and how it can help us
+                improve our lives.
+            </p>
+        </section1>
+        <section2 class="column">
+            <p class="text">
+                <strong><u><br>Mission statement:</u></strong><br><br>
+                I’m a young (at heart) future Computer Scientist determined to use
+                and be part of the technology evolution that will change the world
+                and will make the world, and the people who inhabit it, better.
+            </p>
+        </section2>
+
+    </main>
+
+    <footer class="text-center">
+        <br>
+        <p class="foot">
+            <a class="newa" href="design_spec.pdf" target="_blank">
+                Download Design Specifications</a>
+        </p>
+        <br>
+        <p class="foot">&#169; Copyright Mauricio Rusconi, <b>2020</b></p>
+
+        <!--page update javascript code -->
+
+        <p class="foot">
+            <script>
+                document.write("Page last updated on " + document.lastModified);
+            </script>
+        </p>
+
+        <!--<audio src="./music/piano_muzak.mp3" controls>
+    <p>If you are reading this, it is because your browser does not support the audio element.</p>
+  </audio>
+
+  <button type="button" onclick=" window.open('muzak2.html','_blank')">Musak?</button> -->
+
+        <!-- <button onclick="myFunction()">Music</button> -->
+        <button class="button" style="vertical-align:middle" onclick="myFunction()"><span>Music</span></button>
+        <script>
+            function myFunction() {
+                /*var myWindow = window.open("", "", "width=200,height=100");*/
+                var myWindow = window.open("music.html", "CASH", "width=100,height=100");
+                myWindow.resizeTo(334, 234);
+                myWindow.moveTo(0, window.screen.availHeight + 5);
+            }
+        </script>
+
+    </footer>
+
+</body>
+
+</html>
